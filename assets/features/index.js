@@ -8,7 +8,13 @@ const people = [
 
 
 function content(){
-    var body = document.querySelector(".container");
-    var nome = people;
-    body.innerHTML = nome;  
+    people.forEach(element => {
+        var list = document.querySelector(".sidebar");
+        var item = document.createElement("BUTTON");
+        var itemText = document.createTextNode(element.name); 
+        item.appendChild(itemText);
+        list.appendChild(item);
+
+
+    });
 }

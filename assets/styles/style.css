@@ -2,3 +2,6 @@
     display: flex;
     background-color: blue;
 }
+.names li{
+    list-style: none;
+}
