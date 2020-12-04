@@ -6,7 +6,6 @@ const people = [
     {name: "Astolfo", street: "Sunnybank Terrace", city: "Anta Gorda", state: "RS", country: "Brazil", telephone: "55555555", birthday: "12/07/1995"}
 ];
 
-
 function content(){
     people.forEach(element => {
         var list = document.querySelector(".sidebar");
@@ -14,7 +13,9 @@ function content(){
         var itemText = document.createTextNode(element.name); 
         item.appendChild(itemText);
         list.appendChild(item);
-
-
     });
 }
+const selectedPerson = document.querySelector(".sidebar");
+selectedPerson.addEventListener("click", element =>{
+    console.log(element.target.innerText);
+});

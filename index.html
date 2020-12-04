@@ -6,14 +6,17 @@
     <title>Cause Effect App</title>
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
-<body>
+<body onload="content()">
+    <label for=".sidebar">Select a Person</label>
+    <label for=".people-information">Here's the selected person information</label>
     <div class="container">
-        <div class="sidebar">
+        <div class="sidebar"></div>
+        <div class="people-information">
+            <h2 class="selected-person-name"></h2>
+            
         </div>
     
     </div>
-    <input type="button" value="Clique Aqui" onclick="content()">
-    teste oie...
     <script src="assets/features/index.js"></script>
 </body>
 </html>
