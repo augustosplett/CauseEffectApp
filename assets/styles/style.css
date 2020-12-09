@@ -1,3 +1,6 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .container{
     display: flex;
     background-color: blue;
@@ -5,10 +8,21 @@
 .sidebar{
     max-width: 30%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    background-color: red;
+    align-content: center;
+    justify-content: center;
+    background-color: red;    
 }
 .people-information{
     max-width: 70%;
     background-color: yellow;
+}
+
+.sidebar ul li{
+    list-style-type: none;
+    padding: 1rem;
+    margin: 0.25rem;
+    background-color: yellowgreen;
+    text-align: center;
 }

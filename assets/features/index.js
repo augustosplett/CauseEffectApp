@@ -7,15 +7,32 @@ const people = [
 ];
 
 function content(){
+    var container = document.querySelector(".sidebar");
+    var list = document.createElement("UL");
+
     people.forEach(element => {
-        var list = document.querySelector(".sidebar");
-        var item = document.createElement("BUTTON");
+        
+        var item = document.createElement("LI");
         var itemText = document.createTextNode(element.name); 
         item.appendChild(itemText);
         list.appendChild(item);
     });
+    
+    container.appendChild(list);
 }
+
 const selectedPerson = document.querySelector(".sidebar");
 selectedPerson.addEventListener("click", element =>{
-    console.log(element.target.innerText);
+    const NomeSelecionado = element.target.innerText;
+    const naLista = nome => nome.name === NomeSelecionado;
+    const resposta = people.find(naLista);
+
+    document.querySelector(".selected-person-name").innerText = resposta.name;
+    document.querySelector("#street").value = resposta.street;
+    document.querySelector("#city").value = resposta.city;
+    document.querySelector("#state").value = resposta.state;
+    document.querySelector("#country").value = resposta.country;
+    document.querySelector("#telephone").value = resposta.telephone;
+    document.querySelector("#birthday").value = resposta.birthday;
+
 });
