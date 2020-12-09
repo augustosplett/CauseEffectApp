@@ -17,6 +17,11 @@
 .people-information{
     max-width: 70%;
     background-color: yellow;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
 .sidebar ul li{
