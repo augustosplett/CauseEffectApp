@@ -1,9 +1,11 @@
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
 }
 .container{
     display: flex;
-    background-color: blue;
+    /*background-color: blue;*/
 }
 .sidebar{
     max-width: 30%;
@@ -12,22 +14,32 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background-color: red;    
+    
 }
 .people-information{
     max-width: 70%;
-    background-color: yellow;
+    background-color: whitesmoke;
     display:flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    box-shadow: 10px 10px 10px darkgray;
+    border: 0.25rem outset whitesmoke;
+    border-radius: 0.25rem;
 }
 
 .sidebar ul li{
+    position: relative;
     list-style-type: none;
     padding: 1rem;
     margin: 0.25rem;
-    background-color: yellowgreen;
+    border-radius: 0.25rem;
     text-align: center;
+    overflow: hidden;
+}
+.sidebar ul li:hover{
+/*    background-color: yellowgreen;*/
+    color: gray;
+
 }
